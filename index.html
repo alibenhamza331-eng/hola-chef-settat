@@ -22,6 +22,10 @@
     property="og:description"
     content="Decouvrez Hola Chef a Settat : une adresse propre, genereuse et moderne pour burgers, tacos, pasticcio, breakfast et drinks."
   >
+  <meta property="og:image" content="assets/images/Screenshot_20260308_000920_Maps.jpg">
+  <meta name="keywords" content="restaurant settat, hola chef, burgers settat, tacos settat, fast food premium">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
   <meta property="og:image" content="assets/images/logo.jpeg">
   <meta property="og:image:alt" content="Logo Hola Chef">
   <meta name="twitter:card" content="summary_large_image">
@@ -123,7 +127,7 @@
                 <button class="lang-button" type="button" data-lang="en" aria-pressed="false">EN</button>
               </div>
               <a
-                class="icon-button"
+                class="icon-button header-instagram"
                 href="https://www.instagram.com/hola.settat?igsh=MWpxbGptaW8yOWY3ZA=="
                 target="_blank"
                 rel="noreferrer"
@@ -136,25 +140,33 @@
                   <path d="M16.6 7.1H16.61" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"></path>
                 </svg>
               </a>
-              <a class="secondary-button" href="tel:+212609092309" data-i18n="cta.call">Appeler</a>
-              <a class="primary-button" href="https://wa.me/212609092309" target="_blank" rel="noreferrer" data-i18n="cta.order">Commander</a>
+              <a class="secondary-button header-cta" href="tel:+212609092309" data-i18n="cta.call">Appeler</a>
+              <a class="primary-button header-cta" href="https://wa.me/212609092309" target="_blank" rel="noreferrer" data-i18n="cta.order">Commander</a>
             </div>
 
-            <button
-              id="menu-toggle"
-              type="button"
-              class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition hover:border-[#FFD700]/60 hover:text-[#FFD700] md:hidden"
-              aria-controls="mobile-menu"
-              aria-expanded="false"
-              aria-label="Ouvrir le menu mobile"
-              data-i18n-aria-label="nav.mobile_open"
-            >
-              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M4 7H20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
-                <path d="M4 12H20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
-                <path d="M4 17H20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
-              </svg>
-            </button>
+            <div class="flex items-center gap-2 md:hidden">
+              <div class="lang-switch lang-switch--compact" role="group" aria-label="Changer la langue" data-i18n-aria-label="language.switch.aria">
+                <button class="lang-button is-active" type="button" data-lang="fr" aria-pressed="true">FR</button>
+                <button class="lang-button" type="button" data-lang="ar" aria-pressed="false">AR</button>
+                <button class="lang-button" type="button" data-lang="en" aria-pressed="false">EN</button>
+              </div>
+
+              <button
+                id="menu-toggle"
+                type="button"
+                class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition hover:border-[#FFD700]/60 hover:text-[#FFD700]"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+                aria-label="Ouvrir le menu mobile"
+                data-i18n-aria-label="nav.mobile_open"
+              >
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M4 7H20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+                  <path d="M4 12H20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+                  <path d="M4 17H20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+                </svg>
+              </button>
+            </div>
           </div>
 
           <div id="mobile-menu" class="mobile-nav-panel md:hidden" aria-hidden="true">
@@ -734,7 +746,10 @@
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <path d="M6.5 5.5L9.4 4.7C10.1 4.5 10.9 4.8 11.2 5.5L12.4 8.1C12.7 8.7 12.5 9.5 11.9 9.9L10.6 10.7C11.4 12.4 12.7 13.8 14.4 14.6L15.2 13.3C15.6 12.7 16.4 12.5 17 12.8L19.6 14C20.3 14.3 20.6 15.1 20.4 15.8L19.6 18.7C19.4 19.4 18.7 19.9 18 19.9C11.9 19.9 7.1 15.1 7.1 9C7.1 8.3 7.6 7.6 8.3 7.4L6.5 5.5Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
       </svg>
-      <span class="floating-call__label" data-i18n="floating.call.label">Appeler</span>
+      <div class="floating-call__text">
+        <span class="floating-call__label" data-i18n="floating.call.label">Commander ici</span>
+        <span class="floating-call__sub" data-i18n="floating.call.sub">via WhatsApp ou appel</span>
+      </div>
     </a>
   </div>
 

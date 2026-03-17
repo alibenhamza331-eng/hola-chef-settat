@@ -10,6 +10,7 @@
   --text-main: #f7f3e7;
   --text-soft: #bdb7a7;
   --shadow-deep: 0 30px 80px rgba(0, 0, 0, 0.45);
+  color-scheme: dark;
 }
 
 *,
@@ -30,6 +31,37 @@ body {
     radial-gradient(circle at 85% 10%, rgba(255, 215, 0, 0.1), transparent 20%),
     linear-gradient(180deg, #171717 0%, #101010 38%, #0d0d0d 100%);
   color: var(--text-main);
+  padding-bottom: 7rem;
+}
+
+* {
+  -webkit-text-size-adjust: 100%;
+}
+
+a[href^="tel"],
+a[href^="mailto"],
+a[href^="https://wa.me"],
+a[href^="http://wa.me"],
+a[href^="whatsapp://"] {
+  color: inherit;
+  text-decoration: none;
+}
+
+a[href^="tel"]:hover,
+a[href^="tel"]:focus-visible,
+a[href^="mailto"]:hover,
+a[href^="mailto"]:focus-visible,
+a[href^="https://wa.me"]:hover,
+a[href^="https://wa.me"]:focus-visible,
+a[href^="http://wa.me"]:hover,
+a[href^="http://wa.me"]:focus-visible,
+a[href^="whatsapp://"]:hover,
+a[href^="whatsapp://"]:focus-visible {
+  color: var(--gold);
+}
+
+*:focus-visible {
+  -webkit-tap-highlight-color: rgba(255, 215, 0, 0.2);
 }
 
 body::before {
@@ -302,6 +334,18 @@ body.menu-open {
 
 .lang-switch--mobile .lang-button {
   flex: 1;
+}
+
+.lang-switch--compact {
+  gap: 0.25rem;
+  padding: 0.12rem 0.2rem;
+}
+
+.lang-switch--compact .lang-button {
+  min-width: 2.2rem;
+  padding: 0.55rem 0.7rem;
+  letter-spacing: 0.16em;
+  font-size: 0.72rem;
 }
 
 .lang-button {
@@ -904,10 +948,9 @@ body.menu-open {
   bottom: 1.4rem;
   z-index: 45;
   display: inline-flex;
-  width: 4rem;
-  height: 4rem;
   align-items: center;
   justify-content: center;
+  gap: 0.65rem;
   border-radius: 999px;
   border: 1px solid rgba(255, 215, 0, 0.35);
   background: radial-gradient(circle at top, rgba(255, 215, 0, 0.35), rgba(13, 13, 13, 0.9));
@@ -915,6 +958,7 @@ body.menu-open {
   box-shadow:
     0 18px 50px rgba(255, 215, 0, 0.2),
     0 22px 55px rgba(0, 0, 0, 0.32);
+  padding: 0.68rem 0.9rem;
   transition:
     transform 220ms ease,
     box-shadow 220ms ease,
@@ -943,27 +987,24 @@ body.menu-open {
   height: 1.6rem;
 }
 
-.floating-call__label {
-  position: absolute;
-  right: calc(100% + 0.7rem);
-  border-radius: 999px;
-  border: 1px solid rgba(255, 215, 0, 0.3);
-  background: rgba(12, 12, 12, 0.92);
-  padding: 0.45rem 0.75rem;
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: #ffe58a;
-  white-space: nowrap;
-  opacity: 0;
-  transform: translateX(0.35rem);
-  transition: opacity 200ms ease, transform 200ms ease;
-  pointer-events: none;
+.floating-call__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.08rem;
 }
 
-.floating-call:hover .floating-call__label,
-.floating-call:focus-visible .floating-call__label {
-  opacity: 1;
-  transform: translateX(0);
+.floating-call__label {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #ffe58a;
+  line-height: 1.2;
+}
+
+.floating-call__sub {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #d8d0bd;
+  white-space: nowrap;
 }
 
 @keyframes callPulse {
@@ -1030,22 +1071,103 @@ button:focus-visible,
   }
 }
 
-@media (max-width: 1240px) {
+@media (max-width: 1275px) {
+  .header-cta {
+    display: none !important;
+  }
+}
+
+@media (max-width: 945px) {
   .header-frame {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 
-  .site-header .md\:flex {
+  .site-header nav {
+    gap: 0.65rem;
+  }
+
+  .nav-link {
+    font-size: 0.88rem;
+  }
+
+  .lang-switch {
+    gap: 0.25rem;
+    padding: 0.14rem 0.2rem;
+  }
+
+  .lang-button {
+    min-width: 2.1rem;
+    padding: 0.5rem 0.68rem;
+    letter-spacing: 0.14em;
+    font-size: 0.72rem;
+  }
+
+  .icon-button {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  .header-instagram {
     display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .header-frame {
+    padding-left: 0.55rem;
+    padding-right: 0.55rem;
+  }
+
+  .lang-switch--compact {
+    gap: 0.18rem;
+    padding: 0.1rem 0.14rem;
+  }
+
+  .lang-button {
+    min-width: 1.9rem;
+    padding: 0.45rem 0.6rem;
+    letter-spacing: 0.12em;
+    font-size: 0.68rem;
   }
 
   #menu-toggle {
-    display: inline-flex;
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .floating-call__text {
+    display: none;
   }
 
-  #mobile-menu {
-    display: block;
+  .floating-call {
+    width: 3.8rem;
+    height: 3.8rem;
+    padding: 0.6rem;
+    gap: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  body {
+    padding-bottom: 8rem;
+  }
+
+  .floating-call {
+    right: 1rem;
+    bottom: 1.6rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .floating-call {
+    width: 3.8rem;
+    height: 3.8rem;
+    padding: 0.6rem;
+    justify-content: center;
+    gap: 0;
   }
 }
 
