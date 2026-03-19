@@ -601,7 +601,7 @@ const translations = {
     "menu.count": "{count} choix",
     "gallery.chip": "Galerie reelle",
     "gallery.title": "Des visuels authentiques du lieu, du menu et de l'identite Hola Chef.",
-    "gallery.copy": "Aucun rendu IA. La galerie utilise uniquement les captures locales fournies dans le projet.",
+    "gallery.copy": "Des photos reelles du lieu, du menu et de l'ambiance.",
     "gallery.item1.tag": "Burger",
     "gallery.item1.title": "Signature burger",
     "gallery.item1.alt": "Burger premium de Hola Chef",
@@ -746,7 +746,7 @@ const translations = {
     "menu.count": "{count} items",
     "gallery.chip": "Real gallery",
     "gallery.title": "Authentic visuals of the place, the menu, and the Hola Chef identity.",
-    "gallery.copy": "No AI renderings. The gallery uses only the local captures provided in the project.",
+    "gallery.copy": "Real photos of the place, the menu, and the vibe.",
     "gallery.item1.tag": "Burger",
     "gallery.item1.title": "Signature burger",
     "gallery.item1.alt": "Hola Chef premium burger",
@@ -891,7 +891,7 @@ const translations = {
     "menu.count": "{count} خيارات",
     "gallery.chip": "معرض حقيقي",
     "gallery.title": "صور أصلية للمكان والقائمة وهوية هولا شيف.",
-    "gallery.copy": "بدون صور مولدة بالذكاء الاصطناعي. المعرض يستخدم فقط اللقطات المحلية الموفرة في المشروع.",
+    "gallery.copy": "صور حقيقية للمكان والقائمة والأجواء.",
     "gallery.item1.tag": "برغر",
     "gallery.item1.title": "برغر سيغنتشر",
     "gallery.item1.alt": "برغر فاخر من هولا شيف",
@@ -1056,6 +1056,13 @@ document.addEventListener("DOMContentLoaded", () => {
       const value = t(element.dataset.i18nAlt);
       if (value) {
         element.setAttribute("alt", value);
+      }
+    });
+
+    document.querySelectorAll("[data-i18n-placeholder]").forEach((element) => {
+      const value = t(element.dataset.i18nPlaceholder);
+      if (value) {
+        element.setAttribute("placeholder", value);
       }
     });
   };

@@ -27,7 +27,11 @@ body {
   min-height: 100vh;
   font-family: "Inter", sans-serif;
   background:
-    radial-gradient(circle at top left, rgba(255, 215, 0, 0.18), transparent 28%),
+    radial-gradient(
+      circle at top left,
+      rgba(255, 215, 0, 0.18),
+      transparent 28%
+    ),
     radial-gradient(circle at 85% 10%, rgba(255, 215, 0, 0.1), transparent 20%),
     linear-gradient(180deg, #171717 0%, #101010 38%, #0d0d0d 100%);
   color: var(--text-main);
@@ -84,7 +88,11 @@ body::after {
   z-index: -3;
   background:
     radial-gradient(circle at 50% 0%, rgba(255, 215, 0, 0.12), transparent 32%),
-    radial-gradient(circle at 20% 100%, rgba(255, 215, 0, 0.08), transparent 28%);
+    radial-gradient(
+      circle at 20% 100%,
+      rgba(255, 215, 0, 0.08),
+      transparent 28%
+    );
   filter: blur(30px);
   pointer-events: none;
 }
@@ -124,7 +132,9 @@ body::after {
 }
 
 .site-header {
-  transition: transform 220ms ease, opacity 220ms ease;
+  transition:
+    transform 220ms ease,
+    opacity 220ms ease;
 }
 
 .header-frame {
@@ -173,7 +183,9 @@ body::after {
   gap: 0.35rem;
   font-weight: 600;
   color: #c6c0b2;
-  transition: color 200ms ease, transform 200ms ease;
+  transition:
+    color 200ms ease,
+    transform 200ms ease;
 }
 
 .developer-link svg {
@@ -421,8 +433,11 @@ body.menu-open {
 .menu-panel,
 .menu-showcase {
   border: 1px solid var(--stroke);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.03) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.03) 100%
+  );
   box-shadow: var(--shadow-deep);
 }
 
@@ -493,7 +508,11 @@ body.menu-open {
   position: absolute;
   inset: auto 0 0;
   height: 55%;
-  background: linear-gradient(180deg, transparent 0%, rgba(10, 10, 10, 0.82) 100%);
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(10, 10, 10, 0.82) 100%
+  );
 }
 
 .media-copy {
@@ -548,7 +567,11 @@ body.menu-open {
   inset: 0 auto auto 0;
   width: 100%;
   height: 0.24rem;
-  background: linear-gradient(90deg, rgba(255, 215, 0, 0.8), rgba(255, 215, 0, 0));
+  background: linear-gradient(
+    90deg,
+    rgba(255, 215, 0, 0.8),
+    rgba(255, 215, 0, 0)
+  );
   opacity: 0;
   transition: opacity 220ms ease;
 }
@@ -586,7 +609,11 @@ body.menu-open {
   left: 1.2rem;
   height: 0.2rem;
   border-radius: 999px;
-  background: linear-gradient(90deg, rgba(255, 215, 0, 0.7), rgba(255, 215, 0, 0));
+  background: linear-gradient(
+    90deg,
+    rgba(255, 215, 0, 0.7),
+    rgba(255, 215, 0, 0)
+  );
   opacity: 0;
   transition: opacity 220ms ease;
 }
@@ -714,7 +741,11 @@ body.menu-open {
   position: absolute;
   inset: 0 auto 0 0;
   width: 0.2rem;
-  background: linear-gradient(180deg, rgba(255, 215, 0, 0.9), rgba(255, 215, 0, 0.1));
+  background: linear-gradient(
+    180deg,
+    rgba(255, 215, 0, 0.9),
+    rgba(255, 215, 0, 0.1)
+  );
   opacity: 0;
   transition: opacity 180ms ease;
 }
@@ -776,7 +807,9 @@ body.menu-open {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 320ms ease, filter 320ms ease;
+  transition:
+    transform 320ms ease,
+    filter 320ms ease;
 }
 
 .gallery-card::after {
@@ -784,7 +817,11 @@ body.menu-open {
   position: absolute;
   inset: auto 0 0;
   height: 60%;
-  background: linear-gradient(180deg, transparent 10%, rgba(10, 10, 10, 0.88) 100%);
+  background: linear-gradient(
+    180deg,
+    transparent 10%,
+    rgba(10, 10, 10, 0.88) 100%
+  );
 }
 
 .gallery-card:hover img,
@@ -931,7 +968,11 @@ body.menu-open {
   position: absolute;
   inset: auto 0 0;
   height: 70%;
-  background: linear-gradient(180deg, transparent 0%, rgba(10, 10, 10, 0.94) 100%);
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(10, 10, 10, 0.94) 100%
+  );
 }
 
 .contact-card__overlay {
@@ -953,7 +994,11 @@ body.menu-open {
   gap: 0.65rem;
   border-radius: 999px;
   border: 1px solid rgba(255, 215, 0, 0.35);
-  background: radial-gradient(circle at top, rgba(255, 215, 0, 0.35), rgba(13, 13, 13, 0.9));
+  background: radial-gradient(
+    circle at top,
+    rgba(255, 215, 0, 0.35),
+    rgba(13, 13, 13, 0.9)
+  );
   color: var(--gold);
   box-shadow:
     0 18px 50px rgba(255, 215, 0, 0.2),
@@ -1017,7 +1062,6 @@ body.menu-open {
     opacity: 0;
   }
 }
-
 
 body.is-rtl {
   direction: rtl;
